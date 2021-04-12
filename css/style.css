@@ -1,0 +1,240 @@
+:root {
+  --box-shadow: 0 1px 3px #7036a0, 0 1px 2px #7036a0;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: #222121;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color:#fff;
+  
+}
+
+.container {
+  margin: 10px auto;
+  width: 350px;
+  background-color: rgb(53, 53, 54);
+
+  border-radius: 15px;
+  border-width: 5;
+  border-style: groove;
+  border-color: #9a62db;
+  
+}
+
+h1 {
+  
+  letter-spacing: 1px;
+  margin: 1px;
+  color: #9a62db;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+h2{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blinkCursor 500ms infinite normal, typing 2s steps(40) 1s normal;
+}
+
+@keyframes typing {
+  from{
+    width:0;
+  }
+  to{
+    width:18em;
+  }
+  
+}
+@keyframes blinkCursor{
+  from{
+    border-right-color: transparent;
+  }
+  to{
+    border-right-color: transparent;
+  }
+}
+h3 {
+  border-bottom: 1px solid rgb(175, 173, 173);
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+}
+
+h4 {
+  margin-top: 15px 0;
+  text-transform: uppercase;
+  color: #ffff;
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(54, 53, 53);
+  color: #ffff;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+  
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #7036a0;
+  
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+  
+  
+}
+
+.money.plus {
+  color: #2ecc71;
+  
+  
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+label {
+  display: flex;
+  margin: 1px 50px ;
+  color: #ffff;
+  flex-direction: row;
+justify-content: center;
+align-items: center
+  
+
+}
+small{
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+align-items: center
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 2px solid #913df1;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 7px ;
+  display: flex;
+  margin: 2px 70px;
+  background-color: rgb(255, 255, 255);
+  flex-direction: row;
+  
+
+  
+}
+
+.btn {
+  cursor: pointer;
+  background-color:  rgb(158, 74, 228);
+  color: rgb(255, 255, 255);
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 15px;
+  border: 2px solid #ffffff;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  
+}
+.btn:hover{
+  background: #3e5db4d3;
+}
+.btn:focus,
+.delete-btn:focus {
+  outline: 5;
+}
+
+.transactions {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.transactions li {
+  background-color: rgb(255, 255, 255);
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 50px;
+  transition: 0.2s ease;
+}
+
+.transactions li.plus {
+  border-right: 5px solid #1add6b;
+  
+}
+
+.transactions li.minus {
+  border-right: 5px solid #9e1f1f;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #db291c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: 0.2s ease;
+
+}
+
+.transactions li:hover, .delete-btn:hover {
+  opacity: 75%;
+}
